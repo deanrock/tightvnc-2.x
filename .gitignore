@@ -1,0 +1,5 @@
+*.vcxproj.user
+*.opensdf
+*.sdf
+/Debug/
+/win-event-log/
