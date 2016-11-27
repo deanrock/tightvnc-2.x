@@ -390,6 +390,7 @@
     <ClCompile Include="tvnserver.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="afxres.h" />
     <ClInclude Include="BuildTime.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
