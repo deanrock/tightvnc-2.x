@@ -13,4 +13,4 @@ choco install windows-sdk-8.0
 
 ## License
 
-Project is licesed under GNU Public License version 2.
+Project is licensed under GNU Public License version 2.
