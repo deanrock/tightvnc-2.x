@@ -3,3 +3,5 @@
 *.sdf
 /Debug/
 /win-event-log/
+/ipch/
+/*.suo

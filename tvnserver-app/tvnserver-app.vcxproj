@@ -302,6 +302,7 @@
     <ClCompile Include="ServiceControlApplication.cpp" />
     <ClCompile Include="ServiceControlCommandLine.cpp" />
     <ClCompile Include="SessionChangesWatcher.cpp" />
+    <ClCompile Include="TvnForegroundServer.cpp" />
     <ClCompile Include="TvnServer.cpp" />
     <ClCompile Include="TvnServerApplication.cpp" />
     <ClCompile Include="TvnServerHelp.cpp" />
@@ -309,6 +310,7 @@
     <ClCompile Include="TvnService.cpp" />
     <ClCompile Include="WinEventLogWriter.cpp" />
     <ClCompile Include="WsConfigRunner.cpp" />
+    <ClCompile Include="TvnForegroundServerApplication.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdditionalActionApplication.h" />
@@ -333,6 +335,8 @@
     <ClInclude Include="ServiceControlApplication.h" />
     <ClInclude Include="ServiceControlCommandLine.h" />
     <ClInclude Include="SessionChangesWatcher.h" />
+    <ClInclude Include="TvnForegroundServer.h" />
+    <ClInclude Include="TvnForegroundServerApplication.h" />
     <ClInclude Include="TvnServer.h" />
     <ClInclude Include="TvnServerApplication.h" />
     <ClInclude Include="TvnServerHelp.h" />

@@ -48,6 +48,13 @@ public:
    * @return true if any of help flags are set.
    */
   bool showHelp();
+
+  void ServerCommandLine::getPort(StringStorage *port);
+  void ServerCommandLine::getPassword(StringStorage *password);
+
+  private:
+  const static TCHAR PORT_KEY[];
+  const static TCHAR PASSWORD_KEY[];
 };
 
 #endif // __SERVERCOMMANDLINE_H__

@@ -36,6 +36,7 @@
 #include "tvnserver-app/ServiceControlCommandLine.h"
 #include "tvnserver-app/QueryConnectionCommandLine.h"
 #include "tvnserver-app/DesktopServerCommandLine.h"
+#include "tvnserver-app/TvnForegroundServerApplication.h"
 
 #include "tvncontrol-app/ControlApplication.h"
 #include "tvncontrol-app/ControlCommandLine.h"
@@ -69,6 +70,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     { ControlCommandLine::CHECK_SERVICE_PASSWORDS, NO_ARG },
     { ControlCommandLine::CONTROL_SERVICE, NO_ARG },
     { ControlCommandLine::CONTROL_APPLICATION, NO_ARG },
+	{ ControlCommandLine::FOREGROUND, NO_ARG },
 
     { DesktopServerCommandLine::DESKTOP_SERVER_KEY, NO_ARG },
     { QueryConnectionCommandLine::QUERY_CONNECTION, NO_ARG },
@@ -172,6 +174,13 @@ int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
       WindowNames::WINDOW_CLASS_NAME,
       lpCmdLine);
     return tvnsc.run();
+  } else if (firstKey.isEqualTo(ControlCommandLine::FOREGROUND)) {
+	crashHook.setGuiEnabled();
+	TvnForegroundServerApplication tvnServer(hInstance,
+	  WindowNames::WINDOW_CLASS_NAME,
+	  lpCmdLine, &winEventLogWriter);
+
+	return tvnServer.run();
   }
 
   // No additional applications, run TightVNC server as single application.

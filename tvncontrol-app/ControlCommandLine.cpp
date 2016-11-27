@@ -57,6 +57,8 @@ const TCHAR ControlCommandLine::SLAVE_MODE[] = _T("-slave");
 
 const TCHAR ControlCommandLine::DONT_ELEVATE[] = _T("-dontelevate");
 
+const TCHAR ControlCommandLine::FOREGROUND[] = _T("-foreground");
+
 ControlCommandLine::ControlCommandLine()
 : m_displayNumber(0),
   m_sharedAppProcessId(0)

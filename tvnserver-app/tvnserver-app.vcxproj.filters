@@ -98,6 +98,12 @@
     <ClCompile Include="CrashHook.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TvnForegroundServer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TvnForegroundServerApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AdditionalActionApplication.h">
@@ -188,6 +194,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WinServiceEvents.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TvnForegroundServer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TvnForegroundServerApplication.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

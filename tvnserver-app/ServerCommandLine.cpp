@@ -25,6 +25,9 @@
 #include "ServerCommandLine.h"
 #include "util/CommandLine.h"
 
+const TCHAR ServerCommandLine::PORT_KEY[] = _T("-port");
+const TCHAR ServerCommandLine::PASSWORD_KEY[] = _T("-password");
+
 ServerCommandLine::ServerCommandLine()
 {
 }
@@ -42,7 +45,10 @@ bool ServerCommandLine::parse(const CommandLineArgs *cmdArgs)
     { _T("/help"), NO_ARG },
     { _T("/h"), NO_ARG },
     { _T("/?"), NO_ARG },
-    { _T("-run"), NO_ARG }
+    { _T("-run"), NO_ARG },
+	{ _T("-foreground"), NO_ARG },
+	{ PORT_KEY, NEEDS_ARG },
+	{ PASSWORD_KEY, NEEDS_ARG }
   };
 
   if (!CommandLine::parse(format, sizeof(format) / sizeof(CommandLineFormat), cmdArgs)) {
@@ -60,4 +66,22 @@ bool ServerCommandLine::showHelp()
   return optionSpecified(_T("-help")) || optionSpecified(_T("-h")) ||
          optionSpecified(_T("-?")) || optionSpecified(_T("/help")) ||
          optionSpecified(_T("/h")) || optionSpecified(_T("/?"));
+}
+
+void ServerCommandLine::getPort(StringStorage *port)
+{
+  if (!optionSpecified(PORT_KEY, port)) {
+    _ASSERT(FALSE);
+
+    port->setString(0);
+  }
+}
+
+void ServerCommandLine::getPassword(StringStorage *password)
+{
+  if (!optionSpecified(PASSWORD_KEY, password)) {
+    _ASSERT(FALSE);
+
+    password->setString(0);
+  }
 }

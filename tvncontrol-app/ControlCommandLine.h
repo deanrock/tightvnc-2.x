@@ -58,6 +58,8 @@ public:
   static const TCHAR SLAVE_MODE[];
   static const TCHAR DONT_ELEVATE[];
 
+  static const TCHAR FOREGROUND[];
+
 public:
   ControlCommandLine();
   virtual ~ControlCommandLine();
